@@ -1,0 +1,26 @@
+Automatic configuration for local Git repository from a project fork
+
+This script is based on the script given in this blog post http://blog.insoshi.com/2008/10/14/setting-up-your-git-repositories-for-open-source-projects-at-github/ originally created to automate the process specifically for the insoshi project.
+
+Modifications on the original script were made to make it work for any GitHub project through command line arguments. For detailed information on the setup performed by thei script please refer to the original blog post.
+
+Requirements:
+1. working git installation
+2. project fork repository on GitHub
+
+Usage:
+localforkedclone.sh [your GitHub account name] [forked project name in your account] [account name of original forked project]
+
+This script will create a local clone of the forked Git project repository located on GitHub. The specified project fork will be added as an addtional remote repository and a new "dev" branch created to track local development.
+
+After the script is executed:
+"git push" will push local commits to your dev branch
+"git pull" will pull changes from the original project master branch into your local project
+
+Original author:
+  long @ insoshi who wrote a nice blog post about this at:
+  http://blog.insoshi.com/2008/10/14/setting-up-your-git-repositories-for-open-source-projects-at-github/
+
+Modifications by: 
+  Colin Surprenant, http://github.com/colinsurprenant, http://eventuallyconsistent.com/blog/
+
